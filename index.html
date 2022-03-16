@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>REGISTRO ISIL</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js_form.js"></script>
+    <link rel="shortcut icon" href="LOGO ISIL.png">
+</head>
+
+<body>
+<img class="img-logo_isil" src="LOGO ISIL-BLANCO.png">
+<!--Formulario de registro-->
+	<form class="formulario_inicio_registro" id="form_registro">
+        <h1 class="Titulo_form" > REGISTRARSE EN MENSAJERÍA ISIL</h1>
+
+        <label class="form_label" >Nombres:</label>
+        <input type="text" class="form_input" id="Nombres" placeholder="Ingrese sus nombres completos" required>
+
+        <label class="form_label">Apellidos:</label>
+        <input type="text" class="form_input" id="Apellidos" name="Apellidos" placeholder="Ingrese sus apellidos"required>
+
+        <label class="form_label">Edad:</label>
+        <input type="number" class="form_input" id="Edad" name="Edad" placeholder="Ingrese su edad"required>
+
+        <label class="form_label">Correo Electrónico:</label>
+        <input type="mail" class="form_input" id="Correo_Electronico_registro" name="Correo Electronico" placeholder="ejemplo@gmail.com"required>
+
+        <label class="form_label">Nueva Contraseña:</label>
+        <input type="password" class="form_input" id="Contraseña_registro" name="Contraseña" placeholder="Contraseña nueva">
+        
+        <label class="form_label">Confirmar Nueva Contraseña:</label>
+        <input type="password" class="form_input" id="Contraseña_registro_confirmacion" name="Contraseña" placeholder="Contraseña nueva"required>
+        <!--botones-->
+        <input type="button" onclick="validar();" value="REGISTRAR" id="Botom_registrar" class="form_envio" name="botom"required>
+        <p class="form_link">¿Ya tienes cuenta?  <input style="margin-left: 211px;" type="button" onclick="reload_sesion();" value="Iniciar Sesión"></p>
+    </form>
+    
+    <!--Formulario de inicio de sesión-->
+	<form style="display: none;" id="form_sesion" class="formulario_inicio_registro">
+        <h1 class="Titulo_form">MENSAJERÍA ISIL</h1>
+        <label class="form_label">Correo Electrónico:</label>
+        <input type="email" class="form_input" id="Correo_Electronico_sesion" name="Correo_Electronico" placeholder="ejemplo@gmail.com"required>
+        <label class="form_label">Contraseña:</label>
+        <input type="password" class="form_input"id="Contraseña_sesion" name="Contraseña" placeholder="Contraseña nueva"required>
+        <!--botones-->
+        <input type="button" onclick="validar_sesion();" class="form_envio" value="Iniciar Sesión"required>
+        <p class="form_link">¿Aún no tienes una cuenta?  <input style="margin-left: 160px;"type="button" onclick="reload_sesion();" value="Registrate"></p>
+
+    </form>
+
+    <!--Formulario de enviar mensaje-->
+    <form style="display: none;" id="form_mensaje" class="formulario_inicio_registro">
+        <h1>ENVIAR MENSAJE</h1>
+        <label class="form_label"> Para:</label>
+        <input type="email" style="    width: 70%;" class="form_input_sms" id="Correo_Electronico_para" name="Correo_Electronico" placeholder="ejemplo@gmail.com"required>
+        <label class="form_label">Asunto: </label>
+        <input type="text" style="    width: 70%;"  class="form_input_sms" id="asunto_mensaje" name="asunto_mensaje" placeholder="Asunto de mensaje"required>
+        <label class="form_label">Mensaje: </label>
+        <textarea  style="height: 200px;" class="form_input_sms" id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+        <br>
+        <!--botones-->
+        <input type="button" onclick="enviar_mensaje();" class="form_envio" name="ENVIAR" id="enviar" value="Enviar Mensaje">
+        <input type="button" onclick="ver_mensaje();" class="form_envio" name="VER_MENSAJE" id="ver" value="Ver mensajes">
+		<input type="button" onclick="cerrar_sesion();" class="form_envio" name="CERRAR_SESION" id="cerrar" value="Cerrar Sesion">
+        
+    </form>
+
+    <!--Div de ver mensajes-->
+    <div style="display: none;" class="formulario_inicio_registro" id="vista_mensajes">
+        <h1>Mensajes Enviados</h1>
+        <h3>Para:</h3>
+        <p id="muestra_receptor"> dsad</p>
+        <h3>Asunto:</h3>
+        <p id="muestra_asunto">- </p>
+        <h3>Mensaje: </h3>
+        <p id="muestra_mensaje"></p>
+        <input type="button" onclick="div_enviar_mensaje();" value="Enviar Mensaje" class="form_envio">
+    </div>
+    
+</body>
+</html>   

@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:  0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#00adef;
+    background-attachment: fixed;
+    
+}
+.img-logo_isil {
+    width: 10%;
+    margin-left: 48%;
+    margin-top: 1%;
+}
+textarea {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.formulario_inicio_registro {
+    width: 500px;
+    max-width: 100%;
+    margin: 1% 35% 3% 35%;
+    padding: 20px;
+    position: relative;
+    border-radius: 30px;
+    color: rgb(80, 78, 78);
+    font-weight: bold;
+}
+.formulario_inicio_registro, .botom_registro_sesion {
+    background-color:  rgb(251, 255, 255);
+}
+.Titulo_form {
+    text-align: center;
+    margin-top: 0px;
+    color: rgb(5, 5, 5);
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+.form_input, .form_label, .form_envio {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    border-radius: 8px;
+}
+
+.form_input {
+    padding: 10px;
+    border: 0,5px solid rgb(58, 58, 58);
+    background: rgba(240, 240, 240, 0);
+    border-radius: 10px;
+}
+
+.form_input_sms {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+.form_label {
+    border-color: transparent;
+    transition: all 0.2s;
+}
+.form_envio {
+    padding: 10px 20px;
+    cursor:  pointer;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #71DFE7;
+}
+.form_envio:hover {
+    transition: 0.5s;
+    font-size: 20px;
+    color: whitesmoke;
+    background: #009DAE;
+    font-weight: bold;
+}
+
+.form_link input{
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.form_link input:hover{
+    background: #009DAE;
+    transition: 0.5s;
+    color: #fff;
+}
+
+#vista_mensajes h1{
+    font-weight: bold;
+}
+
+#vista_mensajes p{
+    color: gray;
+}
