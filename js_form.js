@@ -1,5 +1,5 @@
 
-function validar() {
+/*function validar() {
     var Nombres, Apellido, Edad, Correo_Electrónico_registro, Contraseña_registro, Correo_Electronico_sesion, Contraseña_sesion, Contraseña_sesion_confirmacion;
     Nombres = document.getElementById("Nombres").value;
     Apellido = document.getElementById("Apellidos").value;
@@ -40,7 +40,7 @@ function validar() {
         document.getElementById("Correo_Electronico_registro").value = "";
         document.getElementById("Contraseña_registro").value = "";
         document.getElementById("Contraseña_registro_confirmacion").value = "";
-        /*mostrar inision de sesion*/ 
+        /*mostrar inision de sesion
         var ocultar_registro = document.getElementById("form_registro");
         var mostrar_sesion = document.getElementById("form_sesion");
         if (mostrar_sesion.style.display === "none") {
@@ -49,6 +49,31 @@ function validar() {
         } 
     }
    
+}*/
+
+function sesion_alumno() {
+    var ocultar_sesion = document.getElementById("form_sesion");
+        var mostrar_sesion_alumno = document.getElementById("form_sesion_alumno");
+        if (mostrar_sesion_alumno.style.display === "none") {
+            mostrar_sesion_alumno.style.display = "block";
+            ocultar_sesion.style.display = "none";
+        } else
+        if (ocultar_sesion.style.display === "none") {
+            mostrar_sesion_alumno.style.display = "none";
+            ocultar_sesion.style.display = "block";
+        }
+}
+function sesion_profesor() {
+    var ocultar_sesion = document.getElementById("form_sesion");
+        var mostrar_sesion_profesor = document.getElementById("form_sesion_profesor");
+        if (mostrar_sesion_profesor.style.display === "none") {
+            mostrar_sesion_profesor.style.display = "block";
+            ocultar_sesion.style.display = "none";
+        } else
+        if (ocultar_sesion.style.display === "none") {
+            mostrar_sesion_profesor.style.display = "none";
+            ocultar_sesion.style.display = "block";
+        }
 }
 function reload_sesion() {
     var ocultar_registro = document.getElementById("form_registro");

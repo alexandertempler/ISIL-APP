@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js_form.js"></script>
+    <title>Iniciar Sesion ISIL</title>
+    <link rel="shortcut icon" href="LOGO ISIL.png">
+
+</head>
+<body>
+       <!--Formulario de inicio de sesión -->
+	<form style="display: block;" id="form_sesion_alumno" class="formulario_inicio_registro">
+        <h1 class="Titulo_form">Bienvenido a ISIL Alumnos</h1>
+        <label class="form_label">Correo Electrónico:</label>
+        <input type="email" class="form_input" id="Correo_Electronico_sesion" name="Correo_Electronico" placeholder="ejemplo@gmail.com"required>
+        <label class="form_label">Contraseña:</label>
+        <input type="password" class="form_input"id="Contraseña_sesion" name="Contraseña" placeholder="Contraseña nueva"required>
+        <!--botones-->
+        <input type="button" onclick="validar_sesion();" class="form_envio" value="Iniciar Sesión"required>
+
+    </form>
+
+</body>
+</html>
