@@ -92,8 +92,8 @@ create table Identidad (
     CodigoUsuario NVARCHAR(50) not null,
     IdEmpresa int not null,
     Username VARCHAR(50) not null,
-    HashPassword BINARY not null,
-    hashCode varchar(50) not null,
+    [Hash]  Varbinary(128) not null,
+    Salt Varbinary(128) not null,
     activo BIT not null,
     PRIMARY key (CodigoUsuario, IdEmpresa)
 );
@@ -249,5 +249,6 @@ ALTER TABLE HistoricoAcademico ADD CONSTRAINT Uk_IdNota_1 UNIQUE (IdNota);
  alter table Matricula add constraint FK_CodigoCurso_3 foreign Key (CodigoCurso) references CicloCursoHorario (CodigoCurso);
  alter table Matricula add constraint FK_IdCarrera_6 foreign Key (IdCarrera) references CicloCursoHorario (IdCarrera);
  alter table HistoricoAcademico add constraint FK_IdMatricula_1 foreign Key (IdMatricula) references Matricula (IdMatricula);
- alter table HistoricoAcademico add constraint FK_IdNota_1 foreign Key (IdNota) references HistoricoAcademico (IdNota);
+ alter table HistoricoAcademico add constraint FK_IdNota_1 foreign Key (IdNota) references Nota (IdNota);
 select IdFacultad from Aula
+
