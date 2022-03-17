@@ -214,6 +214,13 @@ ALTER TABLE CicloCurso ADD CONSTRAINT Uk_CodigoCiclo_1 UNIQUE (CodigoCiclo);
 ALTER TABLE CicloCurso ADD CONSTRAINT Uk_CodigoUsuarioProfesor_1 UNIQUE (CodigoUsuarioProfesor); 
 ALTER TABLE CicloCurso ADD CONSTRAINT Uk_CodigoCurso_2 UNIQUE (CodigoCurso); 
 ALTER TABLE CicloCurso ADD CONSTRAINT Uk_IdCarrera_2 UNIQUE (IdCarrera); 
+ALTER TABLE CicloCursoHorario ADD CONSTRAINT Uk_IdHorario_1 UNIQUE (IdHorario); 
+ALTER TABLE CicloCursoHorario ADD CONSTRAINT Uk_CodigoCiclo_2 UNIQUE (CodigoCiclo); 
+ALTER TABLE CicloCursoHorario ADD CONSTRAINT Uk_CodigoUsuarioProfesor_2 UNIQUE (CodigoUsuarioProfesor); 
+ALTER TABLE CicloCursoHorario ADD CONSTRAINT Uk_CodigoCurso_4 UNIQUE (CodigoCurso); 
+ALTER TABLE CicloCursoHorario ADD CONSTRAINT Uk_IdCarrera_3 UNIQUE (IdCarrera); 
+ALTER TABLE HistoricoAcademico ADD CONSTRAINT Uk_IdMatricula_1 UNIQUE (IdMatricula); 
+ALTER TABLE HistoricoAcademico ADD CONSTRAINT Uk_IdNota_1 UNIQUE (IdNota); 
 
 --Llaves Foraneas --
  alter table Carrera add constraint FK_IdEmpresa_6 foreign key (IdEmpresa) references Empresa(IdEmpresa);
@@ -234,5 +241,13 @@ ALTER TABLE CicloCurso ADD CONSTRAINT Uk_IdCarrera_2 UNIQUE (IdCarrera);
  alter table CicloCursoHorario add constraint FK_CodigoUsuarioProfesor_2 foreign key (CodigoUsuarioProfesor) references CicloCurso(CodigoUsuarioProfesor);
  alter table CicloCursoHorario add constraint FK_CodigoCurso_2 foreign key (CodigoCurso) references CicloCurso(CodigoCurso);
  alter table CicloCursoHorario add constraint FK_IdCarrera_5 foreign key (IdCarrera) references CicloCurso(IdCarrera);
-
+ alter table Matricula add constraint FK_CodigoUsuarioAlumno_1 foreign Key (CodigoUsuarioAlumno) references Usuario (CodigoUsuario);
+ alter table Matricula add constraint FK_IdEmpresa_7 foreign Key (IdEmpresa) references Usuario (IdEmpresa);
+ alter table Matricula add constraint FK_IdHorario_3 foreign Key (IdHorario) references CicloCursoHorario (IdHorario);
+ alter table Matricula add constraint FK_CodigoCiclo_3 foreign Key (CodigoCiclo) references CicloCursoHorario (CodigoCiclo);
+ alter table Matricula add constraint FK_CodigoUsuarioProfesor_3 foreign Key (CodigoUsuarioProfesor) references CicloCursoHorario (CodigoUsuarioProfesor);
+ alter table Matricula add constraint FK_CodigoCurso_3 foreign Key (CodigoCurso) references CicloCursoHorario (CodigoCurso);
+ alter table Matricula add constraint FK_IdCarrera_6 foreign Key (IdCarrera) references CicloCursoHorario (IdCarrera);
+ alter table HistoricoAcademico add constraint FK_IdMatricula_1 foreign Key (IdMatricula) references Matricula (IdMatricula);
+ alter table HistoricoAcademico add constraint FK_IdNota_1 foreign Key (IdNota) references HistoricoAcademico (IdNota);
 select IdFacultad from Aula
